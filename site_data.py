@@ -16,8 +16,7 @@ import configuration
 #         "https://www.hindustantimes.com/","https://www.bbc.com/news/world"]
 
 news_website = ["https://www.ndtv.com/","https://timesofindia.indiatimes.com/",
-        "https://www.indiatoday.in/","https://www.kadaza.in/news",
-        "https://www.news18.com/"]
+        "https://www.indiatoday.in/"]
     
 # job_website = ["https://www.iimjobs.com/", "https://www.shine.com/", 
 #                "https://www.firstnaukri.com/", "https://www.freshersworld.com/", 
@@ -26,8 +25,7 @@ news_website = ["https://www.ndtv.com/","https://timesofindia.indiatimes.com/",
 #                "https://www.jobsarkari.com/", "https://angel.co/jobs" ]
 
 job_portal_website = ["https://www.iimjobs.com/", "https://www.shine.com/", 
-               "https://www.firstnaukri.com/", "https://www.freshersworld.com/", 
-               "https://www.linkedin.com/"]
+               "https://www.firstnaukri.com/"]
             
 adult_website = ["https://www.xvideos.com/", "https://www.pornhub.com/", 
                 "https://xhamster.com/", "https://www.xnxx.com/",
