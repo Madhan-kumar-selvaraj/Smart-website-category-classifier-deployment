@@ -43,9 +43,12 @@ space_website = ["http://amazing-space.stsci.edu/", "http://www.astroengine.com/
                  "http://www.nineplanets.org/", "http://www.worldwidetelescope.org/",
                  "http://www.kidsastronomy.com/", "http://www.fourmilab.ch/solar/solar.html", "http://www.space.com/"]
             
-site_list = [news_website, adult_website, space_website, animal_website]
+# site_list = [news_website, adult_website, space_website, animal_website
+site_list = [news_website, adult_website]
 
-site_list_dict = {"news_website": news_website, "adult_website": adult_website, "space_website": space_website, "animal_website":animal_website}
+
+# site_list_dict = {"news_website": news_website, "adult_website": adult_website, "space_website": space_website, "animal_website":animal_website}
+site_list_dict = {"news_website": news_website, "adult_website": adult_website}
 
 def website_category(url_dict):
 
