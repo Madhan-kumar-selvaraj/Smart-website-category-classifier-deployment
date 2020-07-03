@@ -16,7 +16,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"Hi!": "Welcome to website classifier API"}
+    return {"Hi!": "Welcome to the website classifier API. By using this API one can get to know the catergory of the website URL and the most commonly used words. It can able to learn from your input that's why it is knows as smart classifier", "API's Rule book": "You can get to know the category of this website and also you can add your own category for your website. It will help our API to learn from your data and the result will be more accurate", "Rule 1" : "To get to know the category, send the request in this format 'https://smart-website-classifier.herokuapp.com/(url)'. For example if the url is 'https://news.google.co.in' them replace the '/' with '*' and send the request like this 'https://smart-website-classifier.herokuapp.com/https:**news.google.co.in'", "Rule 2" : "You can add your own category in this format https://smart-website-classifier.herokuapp.com/(url)?category=(category). For example if your url is 'https://www.mdpi.com/journal/agriculture' and category is 'agriculture'. request format is 'https://smart-website-classifier.herokuapp.com/https:**www.mdpi.com*journal*agriculture?category=agriculture'"}
 
 
 @app.get("/{url}")
