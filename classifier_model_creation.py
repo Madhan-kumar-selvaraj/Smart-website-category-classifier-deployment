@@ -70,7 +70,6 @@ def content_extractor(site_url, target):
         
         if key_value is None:       
             file = open(configuration.website_category_path, "w+")
-            print("output:", output)
             dict_length = len(website_category_dict)+1
             website_category_dict.update({dict_length : target})
             print("website_category_dict:", website_category_dict)
