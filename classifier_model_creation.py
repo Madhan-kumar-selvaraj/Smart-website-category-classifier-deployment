@@ -11,6 +11,7 @@ import os
 import json
 import nltk
 import spacy
+import en_core_web_sm
 import requests
 import numpy as np
 from bs4 import BeautifulSoup
@@ -97,7 +98,7 @@ def content_extractor(site_url, target):
             raw_data = soup.get_text()
             words = set(nltk.corpus.words.words())
             raw_data = " ".join(w for w in nltk.wordpunct_tokenize(raw_data) if w.lower() in words)
-            nlp = spacy.load("en")
+            nlp = en_core_web_sm.load()
             file_text = nlp(raw_data)
             words = [token.lemma_ for token in file_text if not token.is_punct and not token.like_num and not token.is_space
                     and not token.is_stop]
