@@ -16,7 +16,7 @@ import configuration
 #         "https://www.hindustantimes.com/","https://www.bbc.com/news/world"]
 
 news_website = ["https://www.ndtv.com/","https://timesofindia.indiatimes.com/",
-        "https://www.indiatoday.in/","https://www.kadaza.in/news","https://www.news18.com/"]
+        "https://www.indiatoday.in/"]
     
 # job_website = ["https://www.iimjobs.com/", "https://www.shine.com/", 
 #                "https://www.firstnaukri.com/", "https://www.freshersworld.com/", 
@@ -25,7 +25,7 @@ news_website = ["https://www.ndtv.com/","https://timesofindia.indiatimes.com/",
 #                "https://www.jobsarkari.com/", "https://angel.co/jobs" ]
 
 job_portal_website = ["https://www.iimjobs.com/", "https://www.shine.com/", 
-               "https://www.firstnaukri.com/", "https://www.freshersworld.com/","https://www.linkedin.com/"]
+               "https://www.firstnaukri.com/"]
             
 # adult_website = ["https://www.xvideos.com/", "https://www.pornhub.com/", 
 #                 "https://xhamster.com/", "https://www.xnxx.com/",
@@ -55,11 +55,11 @@ space_website = ["http://amazing-space.stsci.edu/", "http://www.astroengine.com/
                  "http://www.kidsastronomy.com/", "http://www.fourmilab.ch/solar/solar.html", "http://www.space.com/"]
             
 # site_list = [news_website, adult_website, space_website, animal_website
-site_list = [news_website, job_portal_website, adult_website]
+site_list = [news_website, job_portal_website]
 
 
 # site_list_dict = {"news_website": news_website, "adult_website": adult_website, "space_website": space_website, "animal_website":animal_website}
-site_list_dict = {"news_website": news_website, "job_portal_website": job_portal_website, "adult_website" : adult_website}
+site_list_dict = {"news_website": news_website, "job_portal_website": job_portal_website}
 
 def website_category(url_dict):
 
