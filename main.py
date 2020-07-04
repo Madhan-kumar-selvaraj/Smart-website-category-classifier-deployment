@@ -20,7 +20,7 @@ def read_root():
 
 
 @app.get("/{url}")
-def read_item(url: str, category : Optional[str] = None):
+async def read_item(url: str, category : Optional[str] = None):
     print(category)
     print(url)
     if category is None:
@@ -33,7 +33,7 @@ def read_item(url: str, category : Optional[str] = None):
 
 
 @app.get("/rootaccess/{password}")
-def read_user(password: str):
+async def read_user(password: str):
     print(password)
     if password == "madhan123":
         status = classifier_model_creation.content_extractor(site_list, None)
