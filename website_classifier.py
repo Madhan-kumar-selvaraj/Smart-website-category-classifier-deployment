@@ -41,11 +41,17 @@ def classify(url):
             words_most_frequent = [word[0] for word in frequencies_words]
             untokenize_data = TreebankWordDetokenizer().detokenize(strip_data)
             complete_data.append(untokenize_data)
-            
-            vocabalary = pickle.load(open(configuration.vocabulary_path, "rb"))
+            try:
+                vocabalary = pickle.load(open(configuration.vocabulary_path, "rb"))
+            except:
+                vocabalary = pickle.load(open(configuration.vocabulary_backup_path, "rb"))
             data = vocabalary.transform(complete_data)
-            with open(configuration.classifier_model_path, 'rb') as fid:
-                model_load = cPickle.load(fid)
+            try:
+                with open(configuration.classifier_model_path, 'rb') as fid:
+                    model_load = cPickle.load(fid)
+            except:
+                with open(configuration.classifier_model_backup_path, 'rb') as fid:
+                    model_load = cPickle.load(fid)
             y_predict = model_load.predict(data)
             array_percentage = model_load.predict_proba(data)
             array_percentage = array_percentage *100
