@@ -37,22 +37,22 @@ adult_website = ["https://www.xvideos.com/", "https://www.pornhub.com/",
                 "https://xhamster.com/", "https://www.xnxx.com/",
                 "https://www.youporn.com/"]
 
-technology_website = ["https://techcrunch.com/", "https://gizmodo.com/", 
-                      "https://www.techhive.com/", "https://www.cbinsights.com/", 
-                      "https://www.cordcuttersnews.com/", "https://www.makeuseof.com/", 
-                      "https://lifehacker.com/", "https://www.computerworld.com/in/",
-                      "https://www.howtogeek.com/", "https://www.pymnts.com/"]
+# technology_website = ["https://techcrunch.com/", "https://gizmodo.com/", 
+#                       "https://www.techhive.com/", "https://www.cbinsights.com/", 
+#                       "https://www.cordcuttersnews.com/", "https://www.makeuseof.com/", 
+#                       "https://lifehacker.com/", "https://www.computerworld.com/in/",
+#                       "https://www.howtogeek.com/", "https://www.pymnts.com/"]
 
-animal_website = ["http://www.worldanimalnet.org/", "http://animaladay.blogspot.com/", 
-                  "http://www.animalcorner.co.uk/", "http://www.zooborns.com/", 
-                  "http://www.arkive.org/education", "http://www.vitalground.org/", 
-                  "http://www.bestanimalsites.com/", "http://www.kidsplanet.org/", 
-                  "http://www.wildlifearchives.com/", "http://switchzoo.com/"]
+# animal_website = ["http://www.worldanimalnet.org/", "http://animaladay.blogspot.com/", 
+#                   "http://www.animalcorner.co.uk/", "http://www.zooborns.com/", 
+#                   "http://www.arkive.org/education", "http://www.vitalground.org/", 
+#                   "http://www.bestanimalsites.com/", "http://www.kidsplanet.org/", 
+#                   "http://www.wildlifearchives.com/", "http://switchzoo.com/"]
               
-space_website = ["http://amazing-space.stsci.edu/", "http://www.astroengine.com/", 
-                 "http://chandra.harvard.edu/", "http://hubblesite.org/", "http://www.spaceweather.com/", 
-                 "http://www.nineplanets.org/", "http://www.worldwidetelescope.org/",
-                 "http://www.kidsastronomy.com/", "http://www.fourmilab.ch/solar/solar.html", "http://www.space.com/"]
+# space_website = ["http://amazing-space.stsci.edu/", "http://www.astroengine.com/", 
+#                  "http://chandra.harvard.edu/", "http://hubblesite.org/", "http://www.spaceweather.com/", 
+#                  "http://www.nineplanets.org/", "http://www.worldwidetelescope.org/",
+#                  "http://www.kidsastronomy.com/", "http://www.fourmilab.ch/solar/solar.html", "http://www.space.com/"]
             
 # site_list = [news_website, adult_website, space_website, animal_website
 site_list = [news_website, job_portal_website]
