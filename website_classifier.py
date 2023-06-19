@@ -82,5 +82,5 @@ def classify(url):
         else:
             return ("Can't extract content from the website", "Site may be invalid or unavailable or having very few content", "Not available", "Not available", "Not available")
         
-    except Exception as e:
-        return ("Facing error while parsing the website", e, "Not available", "Not available", "Not available")
+    except Exception as error:
+        return ("Facing error while parsing the website", error, "Not available", "Not available", "Not available")
