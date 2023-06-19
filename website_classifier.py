@@ -9,7 +9,7 @@ import nltk
 from nltk.probability import FreqDist
 nltk.download('words')
 import spacy
-import en_core_web_sm
+# import en_core_web_sm
 import requests
 from bs4 import BeautifulSoup
 from nltk.tokenize.treebank import TreebankWordDetokenizer
@@ -33,7 +33,8 @@ def classify(url):
         words = set(nltk.corpus.words.words())
         raw_data = " ".join(w for w in nltk.wordpunct_tokenize(raw_data) if w.lower() in words)
         print("03")
-        nlp = en_core_web_sm.load()
+        nlp = spacy.load("en_core_web_sm")
+        print("04")
         file_text = nlp(raw_data)
         print(1)
         words = [token.lemma_ for token in file_text if not token.is_punct and not token.like_num and not token.is_space
