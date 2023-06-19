@@ -24,15 +24,15 @@ def classify(url):
         url = url.replace("*","/")
         complete_data = []
         response = requests.get(url, timeout=100)
-        print(01)
+        print("01")
         soup = BeautifulSoup(response.content, 'html5lib')
         for script in soup(["script", "style"]):
             script.extract()
-        print(02)
+        print("02")
         raw_data = soup.get_text()
         words = set(nltk.corpus.words.words())
         raw_data = " ".join(w for w in nltk.wordpunct_tokenize(raw_data) if w.lower() in words)
-        print(03)
+        print("03")
         nlp = en_core_web_sm.load()
         file_text = nlp(raw_data)
         print(1)
