@@ -32,7 +32,7 @@ def classify(url):
         
         nlp = en_core_web_sm.load()
         file_text = nlp(raw_data)
-        
+        print(1)
         words = [token.lemma_ for token in file_text if not token.is_punct and not token.like_num and not token.is_space
                 and not token.is_stop]
         strip_data = [token.lower() for token in words if not len(token.strip())<2 and not len(token.strip())>15]
@@ -41,14 +41,17 @@ def classify(url):
             words_most_frequent = [word[0] for word in frequencies_words]
             untokenize_data = TreebankWordDetokenizer().detokenize(strip_data)
             complete_data.append(untokenize_data)
+            print(2)
             try:
                 vocabalary = pickle.load(open(configuration.vocabulary_path, "rb"))
+                print(3)
             except:
                 vocabalary = pickle.load(open(configuration.vocabulary_backup_path, "rb"))
             data = vocabalary.transform(complete_data)
             try:
                 with open(configuration.classifier_model_path, 'rb') as fid:
                     model_load = cPickle.load(fid)
+                print(4)
             except:
                 with open(configuration.classifier_model_backup_path, 'rb') as fid:
                     model_load = cPickle.load(fid)
@@ -63,6 +66,7 @@ def classify(url):
             file.close()
             target_dict= {}
             category_url_list = []
+            print(5)
             for key, value in dic.items():
                 target_dict[int(key)] = value
                 category_url_list.append(value)
@@ -72,6 +76,7 @@ def classify(url):
             result_percent = array_percentage[:,y_predict[0]-1][0]
             result_percent = result_percent.round(2)
             if result_percent > 30 :
+                print(6)
                 if len(strip_data)<500:
                     return (str(target_dict[y_predict[0]] ), "Note: Classification result may be inaccurate due to minimal content in the website and it's accuracy is " + str(result_percent) + " %" , "You can add you own category for your website. If the name of the category peresent in the below list use that name. Or else create your own in this format https://smart-website-classifier.herokuapp.com/(url)?category=(category). For exmaple: https://smart-website-classifier.herokuapp.com/https:**www.mdpi.com*journal*agriculture?category=agriculture", category_url_list, words_most_frequent)
                 else:
