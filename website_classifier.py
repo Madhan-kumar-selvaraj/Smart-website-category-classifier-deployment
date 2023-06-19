@@ -20,6 +20,7 @@ import json
 
 def classify(url):
     try:
+        print(0)
         url = url.replace("*","/")
         complete_data = []
         response = requests.get(url)
