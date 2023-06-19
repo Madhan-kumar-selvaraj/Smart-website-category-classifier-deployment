@@ -9,4 +9,4 @@ beautifulsoup4
 html5lib==1.1
 json5==0.9.14
 numpy==1.21.5
-scikit-learn==1.2.2
+scikit-learn==1.0.2
