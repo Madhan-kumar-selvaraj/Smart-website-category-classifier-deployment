@@ -46,14 +46,18 @@ def classify(url):
             untokenize_data = TreebankWordDetokenizer().detokenize(strip_data)
             complete_data.append(untokenize_data)
             try:
+                print("05.1")
                 vocabalary = pickle.load(open(configuration.vocabulary_path, "rb"))
             except:
+                print("05.2")
                 vocabalary = pickle.load(open(configuration.vocabulary_backup_path, "rb"))
             data = vocabalary.transform(complete_data)
             try:
+                print("05.3")
                 with open(configuration.classifier_model_path, 'rb') as fid:
                     model_load = cPickle.load(fid)
             except:
+                print("05.4")
                 with open(configuration.classifier_model_backup_path, 'rb') as fid:
                     model_load = cPickle.load(fid)
             print("06")
