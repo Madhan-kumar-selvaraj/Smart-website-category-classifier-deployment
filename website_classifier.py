@@ -40,6 +40,7 @@ def classify(url):
                 and not token.is_stop]
         strip_data = [token.lower() for token in words if not len(token.strip())<2 and not len(token.strip())>15]
         if len(strip_data) > 30:
+            print("05")
             frequencies_words = FreqDist(strip_data).most_common(100)
             words_most_frequent = [word[0] for word in frequencies_words]
             untokenize_data = TreebankWordDetokenizer().detokenize(strip_data)
@@ -55,11 +56,12 @@ def classify(url):
             except:
                 with open(configuration.classifier_model_backup_path, 'rb') as fid:
                     model_load = cPickle.load(fid)
+            print("06")
             y_predict = model_load.predict(data)
             array_percentage = model_load.predict_proba(data)
             array_percentage = array_percentage *100
             print(array_percentage[:].round(2))
-            
+            print("07")
             file = open(configuration.website_category_path, "r+")
             output = file.read()
             dic = json.loads(output)
@@ -71,7 +73,7 @@ def classify(url):
                 category_url_list.append(value)
             print(target_dict)
             print(category_url_list)
-
+            print("08")
             result_percent = array_percentage[:,y_predict[0]-1][0]
             result_percent = result_percent.round(2)
             if result_percent > 30 :
