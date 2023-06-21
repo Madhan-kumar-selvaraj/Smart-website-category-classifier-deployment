@@ -20,20 +20,22 @@ import json
 
 def classify(url):
     try:
+        print("01")
         url = url.replace("*","/")
         complete_data = []
         response = requests.get(url, timeout=100)
         soup = BeautifulSoup(response.content, 'html5lib')
         for script in soup(["script", "style"]):
             script.extract()
+        print("02")
         raw_data = soup.get_text()
         words = set(nltk.corpus.words.words())
         raw_data = " ".join(w for w in nltk.wordpunct_tokenize(raw_data) if w.lower() in words)
         # nlp = spacy.load("en")
-        print("01")
+        print("03")
         nlp = spacy.load("en_core_web_sm")
         file_text = nlp(raw_data)
-        print("02")
+        print("04")
         words = [token.lemma_ for token in file_text if not token.is_punct and not token.like_num and not token.is_space
                 and not token.is_stop]
         strip_data = [token.lower() for token in words if not len(token.strip())<2 and not len(token.strip())>15]
