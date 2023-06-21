@@ -23,7 +23,7 @@ def classify(url):
         print("01")
         url = url.replace("*","/")
         complete_data = []
-        response = requests.get(url, timeout=100)
+        response = requests.get(url)
         soup = BeautifulSoup(response.content, 'html5lib')
         for script in soup(["script", "style"]):
             script.extract()
